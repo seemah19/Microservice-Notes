@@ -1,0 +1,2 @@
+DTO - data transfer object, widely used design pattern to transfer the data between client and server
+main advantage of dto is reduce the number of remote calls 
