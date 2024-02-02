@@ -1,0 +1,31 @@
+Microservices interview questions
+@PathVariable - annotation will bind the URI template variable with the method arguments
+ex: http://localhost:8080/students/1
+
+@RequestParam - will extract the value of Query parameter int the request bind it to the method argument
+ex1: http://localhost:8080/students/query?id=1
+ex2: http://localhost:8080/students/query?id=1&firstName=Ramesh&lastName=fadatare
+
+@GetMapping - we will use the @GetMapping to map the incoming HTTP GET request to this method
+
+@PostMapping - is used to map the incoming HTTP POST request to the method (creating new resource)
+HTTP Status code 201 created
+ex: http://localhost:8080/students/create
+In oreder to send a HTTP status in response,we can use @ResponeStatus annotation
+ex: @ResponseStatus(HttpStatus.CREATED)
+
+@RequestBody - is responible for retrieving the HTTP request body i.e JSON to Java object
+NOTE:@RequestBody annotation internally uses the spring provided HttpMessageConverter to convert JSON into Java object
+
+@PutMapping -client sends put request to update the existing resource
+HttpStatus.OK (200 OK)
+
+@ResponseEntity
+It is a Generic type,we can use any type as the response body
+It represents the whole HTTP Response : status code, headers,and body We can use it to fully configure the HTTP response
+Return the instance of responseentity class
+ex: return new ResponseEntity<>(Student,HttpStatus.OK)
+ex: ResponseEntity.ok(student)
+
+@RequestMapping - annotation is used to configure/define the base URL for REST APi's in spring mvc 
+it is a class level annotation 
