@@ -1,0 +1,11 @@
+1. Create and Use ResourceNotFoundException custom exception
+ex: StudentNotFoundException
+class StudentNotFound extends RuntimeException{
+}
+2. Create ErrorDetails class to hold the custom error response
+ex: StudentErrorResponse Class
+3. Create GlobalExceptionHandler class to handle specific and global exception
+
+@ExceptionHandler- is used to handle the exception and  sending the custom responses to the client.
+
+@ControllerAdvice - to handle the exception globally
