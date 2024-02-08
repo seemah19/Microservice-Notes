@@ -9,3 +9,4 @@ ex: StudentErrorResponse Class
 @ExceptionHandler- is used to handle the exception and  sending the custom responses to the client.
 
 @ControllerAdvice - to handle the exception globally
+The@ControllerAdvice annotation allows us to consolidate our multiple, scattered @ExceptionHandlers from before into a single, global error handling component.
