@@ -1,0 +1,20 @@
+public interface Car{
+//in interface only and only abstract methods are allowed
+//100% abstraction
+//only method declaration
+  public void start();
+  public void stop();
+  public void refuel();
+}
+
+public class BMW implements Car{
+  public void start(){
+    System.out.println("start");
+  }
+  public void stop(){
+    System.out.println("stop");
+  }
+  public void start(){
+    System.out.println("refuel");
+  }
+}
