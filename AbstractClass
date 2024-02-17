@@ -1,0 +1,39 @@
+Abstraction
+1. abstract class achieves partial abstraction
+2. hiding the implementation logic  - is called abstraction
+3. abs class can hava abs and non abs methods
+
+public abstract class Bank{
+  public abstract void loan();
+  public void credit(){
+    System.out.println("credit");
+  }
+  public void debit(){
+    System.out.println("debit");
+  }
+}
+
+public HDFC extends Bank{
+  public void loan(){
+        System.out.println("loan");
+    }
+public void funds(){
+        System.out.println("loan");
+    }
+}
+public TestClass{
+public static void main(String args[]){
+    HDFC hd = new HDFC();
+    hd.credit();
+    hd.debit();
+    hd.funds();
+
+    Bank b = new HDFC();
+    b.loan();
+    b.credit();
+    b.debit();
+}
+}
+
+IMPORTANT NOTE: b is reference variable of type Bank
+so b.funds() is not possible
