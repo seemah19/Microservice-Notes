@@ -2,7 +2,7 @@ Abstraction
 1. abstract class achieves partial abstraction
 2. hiding the implementation logic  - is called abstraction
 3. abs class can hava abs and non abs methods
-
+4. can not create the object of abstract class or interface
 public abstract class Bank{
   public abstract void loan();
   public void credit(){
