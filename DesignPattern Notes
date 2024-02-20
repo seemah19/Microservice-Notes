@@ -1,0 +1,13 @@
+Factory Class :
+1. it does not expose the creational logic to the client and refer the created object using a standard interface.
+whether object is created using new keyword, or autowiring 
+2. Also known as virtual constructor
+
+Steps:
+1. Create main class which calls the factory class
+2. factory class returns the required class instance
+
+Abstract Factory Class:
+Engineer, Teacher and Engineer Trainee, Teacher Trainee
+Profession Abstract Factory and Trainee Profession Abstract Factory
+Main Class -> Abstract Factory Producer(getProfession() method)  -> Abstract factory(abstrct class)
