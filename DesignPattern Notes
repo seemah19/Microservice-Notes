@@ -11,3 +11,12 @@ Abstract Factory Class:
 Engineer, Teacher and Engineer Trainee, Teacher Trainee
 Profession Abstract Factory and Trainee Profession Abstract Factory
 Main Class -> Abstract Factory Producer(getProfession() method)  -> Abstract factory(abstrct class)
+
+1. This factory is also called as factory of factories
+2. Abstract factory lets a class returns a factory of classes
+3. So, this is the reason that abstract factory pattern is one level higher than factory pattern.
+
+Steps:
+1. create main class which call factory of factory class
+2. factory of factory/ factory producer creates instance of factory class.
+3. factory class return the required instance.
