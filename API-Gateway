@@ -5,5 +5,10 @@ API-Gateway
 
 Dev Steps:
 1. create spring boot project as microservices (api=gateway)
+   add eureka client, actuator and spring-cloud-starter-gateway-mvc dependency and dont forget to remove mvc in this dependency
 2. Register API-gateway as Eureka client to the eureka server that is service registry
 3. configure API gateway routes and test using post man
+
+NOTE:finally run the rest employee rest api and change the port number to 9191 which is api gateway's port number
+http://localhost:9191/api/employees/4
+
