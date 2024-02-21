@@ -2,3 +2,22 @@
 2. then run config server and service registry then run the department-service
 3. go to browser type: localhost:8080/swagger-ui/index.html
 4. in order to get the rest-apis in a json format open new window type: localhost:8080/v3/api-docs
+
+II. Defining general API information(using annotations)
+1. annotate main entry point of the class with @OpenAPIDefination(
+info = @Info(
+    title ="Department Service Rest Api",
+    Description ="Department service Rest Api's Documentation"
+    Version ="v1.0",
+    contact = @Contact(
+    name ="seema"
+    email="seema@gmail.com"
+    url ="https:www.javaguides.com"),
+    license = "Apache 2.0",
+    url ="https:www.javaguides.com"
+),
+externalDocs=@ExternalDocumentation(
+    description ="Department service Doc",
+    url ="https:www.javaguides.com"
+)
+)
