@@ -1,0 +1,9 @@
+API-Gateway
+1. API gateway provides a unified interface for a set of microservices so that clients no need to know about all the details of microservices internals.
+2. API Gateway centralizes cross cutting concerns like security , monitoring and rate limiting etc
+3. Spring cloud provides spring cloud gateway to create API gateway
+
+Dev Steps:
+1. create spring boot project as microservices (api=gateway)
+2. Register API-gateway as Eureka client to the eureka server that is service registry
+3. configure API gateway routes and test using post man
