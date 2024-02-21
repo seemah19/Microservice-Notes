@@ -11,6 +11,12 @@ manually adding the routes to the api gateway -Dev Steps:
 
 NOTE:finally run the rest employee rest api and change the port number to 9191 which is api gateway's port number
 http://localhost:9191/api/employees/4
+
+spring.application.name=API-GATEWAY
+server.port=9191
+eureka.instance.client.serviceUrl.defaultZone=http://localhost:8761/eureka/
+management.endpoints.web.exposure.include=*
+
 #routes for employee
 spring.cloud.gateway.routes[0].id=EMPLOYEE-SERVICE
 spring.cloud.gateway.routes[0].uri=lb://EMPLOYEE-SERVICE
