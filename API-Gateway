@@ -28,3 +28,19 @@ spring.cloud.gateway.routes[1].uri=lb://DEPARTMENT-SERVICE
 spring.cloud.gateway.routes[1].predicates[0]=Path=/api/departments/**
 
 automatically adding the routes to the api-gateway
+1. go to spring cloud gateway properties
+2. from spring cloud gateway (the appendix )link ->get the below properties
+
+spring.cloud.gateway.discovery.locator.enabled=true
+spring.cloud.gateway.discovery.locator.lower-case-service-id=true
+logging.level.org.springframework.cloud.gateway.handler.RoutePredicateHandlerMapping=DEBUG
+
+NOTE:finally run the rest employee rest api 
+http://localhost:9191/employee-service/api/employees/4
+also test department rest api
+http://localhost:9191/department-service/api/departments/IT001
+
+
+
+
+
