@@ -3,7 +3,7 @@ API-Gateway
 2. API Gateway centralizes cross cutting concerns like security , monitoring and rate limiting etc
 3. Spring cloud provides spring cloud gateway to create API gateway
 
-Dev Steps:
+manually adding the routes to the api gateway -Dev Steps:
 1. create spring boot project as microservices (api=gateway)
    add eureka client, actuator and spring-cloud-starter-gateway-mvc dependency and dont forget to remove mvc in this dependency
 2. Register API-gateway as Eureka client to the eureka server that is service registry
@@ -11,4 +11,14 @@ Dev Steps:
 
 NOTE:finally run the rest employee rest api and change the port number to 9191 which is api gateway's port number
 http://localhost:9191/api/employees/4
+#routes for employee
+spring.cloud.gateway.routes[0].id=EMPLOYEE-SERVICE
+spring.cloud.gateway.routes[0].uri=lb://EMPLOYEE-SERVICE
+spring.cloud.gateway.routes[0].predicates[0]=Path=/api/employees/**
 
+#routes for department
+spring.cloud.gateway.routes[1].id=DEPARTMENT-SERVICE
+spring.cloud.gateway.routes[1].uri=lb://DEPARTMENT-SERVICE
+spring.cloud.gateway.routes[1].predicates[0]=Path=/api/departments/**
+
+automatically adding the routes to the api-gateway
