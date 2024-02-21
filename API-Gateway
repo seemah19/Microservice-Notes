@@ -40,6 +40,12 @@ http://localhost:9191/employee-service/api/employees/4
 also test department rest api
 http://localhost:9191/department-service/api/departments/IT001
 
+NOTE: whenever you use the spring cloud provided discovery feature you should use the application name in the url 
+
+
+
+
+
 
 
 
