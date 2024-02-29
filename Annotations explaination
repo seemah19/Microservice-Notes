@@ -1,0 +1,3 @@
+@SpringBootApplication
+@EnableAutoConfiguration - this will scan for all the dependencies added in pom.xml and will load all the required jar for us
+and will automatically 
